@@ -15,6 +15,7 @@ Works as a remark plugin with either [unified](https://www.npmjs.com/package/uni
 #### Without options
 
 ```js
+import unified from 'unified'
 import markdown from 'remark-parse'
 import capitalize from 'remark-capitalize'
 import html from 'remark-html'
@@ -29,6 +30,7 @@ const processedContent = await unified()
 #### With Options
 
 ```js
+import unified from 'unified'
 import markdown from 'remark-parse'
 import capitalize from 'remark-capitalize'
 import html from 'remark-html'
