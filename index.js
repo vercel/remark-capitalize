@@ -1,11 +1,11 @@
 const title = require('title')
 const visit = require('unist-util-visit')
 
-module.exports = () => (tree, file) => {
+module.exports = ({ options } = { options: [] }) => (tree, file) => {
   visit(tree, 'heading', node => {
     visit(node, 'text', textNode => {
       const text = textNode.value ? textNode.value.trim() : ''  
-      textNode.value = title(text)
+      textNode.value = title(text, { special: options })
     })
   })
 }
